@@ -131,10 +131,10 @@ Study notes of LaTex
 
  - `\begin{figure}[<允许位置>]`
  - <允许位置>参数（默认tbp）
- -- h: 此处（here）-代码所在的上下文
- -- t: 页顶（top）-代码所在页面或者之后页面的顶部
- -- b: 页底（bottom）-代码所在页面或之后页面的底部
- -- p: 独立一页（page）-浮动页面
+ - - h: 此处（here）-代码所在的上下文
+ - - t: 页顶（top）-代码所在页面或者之后页面的顶部
+ - - b: 页底（bottom）-代码所在页面或之后页面的底部
+ - - p: 独立一页（page）-浮动页面
  - 标题控制：caption和bicaption等宏包
  - 并排与子图表：subcaption，subfig和floatrow等宏包
  - 绕排：picinpar和wrapfig等宏包
@@ -150,10 +150,98 @@ Study notes of LaTex
 
 ### 上下标
 
+#### 上标
+
+- `$3x^{20} - x + 2 = 0$`
+
+#### 上标
+
+- `$a_0, a_1, A_{100x+2}$`
+
 ### 希腊字母
+
+- `$\alpha$`
+- `$\beta$`
+- `$\gamma$`
+- `$\epsilon$`
+- `$\pi$`
+- `$\Gamma$`
+- `$\Delta$`
+- `$\Theta$`
+- `$\Pi$`
+- `$\Omega$`
 
 ### 数学函数
 
+- `$\log$`
+- `$\sin$`
+- `$\cos$`
+- `$\arcsin$`
+- `$\arccos$`
+- `$\sqrt{2}$`
+
 ### 分式
 
+- `$3/4$`
+- `$\frac{3}{4}$`
+
 ### 行间公式
+
+- `比例是 $$\frac{3}{4}$$`
+- `比例是 \[frac{3}{4}\]`
+- `比例是 \begin{displaymath} frac{3}{4} \end{displaymath}`
+- 对公式进行自动编号并且对公式进行交叉引用：
+> `交换律见式\ref{eq:commutative}`
+> `\begin{equation}`
+> `a+b=b+a \label{eq:commutative}`
+> `\end{equation}`
+- 对公式不进行自动编号并且对公式进行交叉引用（需要amsmath宏包）：
+> `交换律见式\ref{eq:commutative}`
+> `\begin{equation*}`
+> `a+b=b+a \label{eq:commutative}`
+> `\end{equation*}`
+
+### 矩阵（需要amsmath宏包）
+
+
+`\begin{document}`
+`\[`
+`\begin{matrix}`
+`0 & 1 \\`
+`1 & 0 `
+`\end{matrix}`
+`\]`
+`\end{document}`
+
+* 加入小括号
+`\begin{pmatrix}`
+`\end{pmatrix}`
+
+* 加入中括号
+`\begin{bmatrix}`
+`\end{bmatrix}`
+
+* 加入大括号
+`\begin{Bmatrix}`
+`\end{Bmatrix}`
+
+* 加入单竖线
+`\begin{vmatrix}`
+`\end{vmatrix}`
+
+* 加入双竖线
+`\begin{Vmatrix}`
+`\end{Vmatrix}`
+
+* 矩阵中的上下标：`\a_{11}^2`
+
+* 矩阵中的省略号：`\dots` `\vdots` `\ddots` `\adots`
+
+* 矩阵中的跨列省略号：`\hdotsfor{<列数>}`
+
+* 矩阵整体下标：
+`\end{bmatrix}_{n \times n}`
+
+* 矩阵行内小矩阵（smallmatrix）
+
+* array环境排版更为复杂的环境

@@ -70,4 +70,90 @@ Study notes of LaTex
  - 弹性长度：`a\hfill b`
 
 
- 
+## 插图
+ - 导言区：`\usepackage{graphicx}`
+ - 语法：`\includegraphics[< 选项 >]{< 文件名 >}`
+ - 格式：EPS，PDF，PNG，JPEG，BMP
+ - 图片在当前目录下的figures和PICS目录下：`\graphicspath{{figures/},{pics
+ - 在正文中插入图片：
+\begin{document}
+\LaTex{}
+设置缩放比例
+\includegraphics[scale=0.3]{lion}
+设置高度
+\includegraphics[height=0.3cm]{lion}
+设置宽度
+\includegraphics[width=0.3cm]{lion}
+设置版型高度
+\includegraphics[height=0.3cm]{lion}
+设置版型宽度
+\includegraphics[width=0.3cm]{lion}
+\end{document}
+
+## 表格
+
+\begin{document}
+生成五列表格，分别是左对齐，居中，居中，右对齐和指定宽度(自动换行)
+\begin{tabular}{l || c | c | r | p{1.5cm}}
+姓名 & 语文 & 数学 & 外语 & 备注 \\
+\hilne \hilne 两个命令可以产生双横线
+姓名 & 语文 & 数学 & 外语 & 备注 \\
+\hilne
+姓名 & 语文 & 数学 & 外语 & 备注 \\
+\hilne
+姓名 & 语文 & 数学 & 外语 & 备注 \\
+\hilne
+\end{tabular}
+\end{document}
+
+## 浮动体
+
+\begin{document}
+交叉引用
+\LaTeX{}中\Tex系统吉祥物见图\ref{fig-lion}
+\begin{figure}
+图片居中
+\centering
+\includegraphics[scale=0.3]{lion}
+设置图片标题并且设置标签
+\caption{\Tex 吉祥物}\label{fig-lion}
+\end{figure}
+\begin{table}
+表格居中
+\centering
+设置图片标题
+\caption{考试成绩单}
+\begin{tabular}{l || c | c | r | p{1.5cm}}
+姓名 & 语文 & 数学 & 外语 & 备注 \\
+\end{tabular}
+\end{table}
+\end{document}
+
+ - `\begin{figure}[<允许位置>]`
+ - <允许位置>参数（默认tbp）
+ -- h: 此处（here）-代码所在的上下文
+ -- t: 页顶（top）-代码所在页面或者之后页面的顶部
+ -- b: 页底（bottom）-代码所在页面或之后页面的底部
+ -- p: 独立一页（page）-浮动页面
+ - 标题控制：caption和bicaption等宏包
+ - 并排与子图表：subcaption，subfig和floatrow等宏包
+ - 绕排：picinpar和wrapfig等宏包
+ - 注意：应该合理使用交叉引用而不是硬编码。
+
+## 数学公式
+
+### 行内公式
+
+* `$ a+b=b+a $`
+* `\( a+b=b+a \)`
+* `\begin{math} a+b=b+a \end{math}`
+
+### 上下标
+
+### 希腊字母
+
+### 数学函数
+
+### 分式
+
+### 行间公式

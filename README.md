@@ -76,58 +76,71 @@ Study notes of LaTex
  - 格式：EPS，PDF，PNG，JPEG，BMP
  - 图片在当前目录下的figures和PICS目录下：`\graphicspath{{figures/},{pics
  - 在正文中插入图片：
-> \begin{document}
-> \LaTex{}
-> 设置缩放比例
-> \includegraphics[scale=0.3]{lion}
-> 设置高度
-> \includegraphics[height=0.3cm]{lion}
-> 设置宽度
-> \includegraphics[width=0.3cm]{lion}
-> 设置版型高度
-> \includegraphics[height=0.3cm]{lion}
-> 设置版型宽度
-> \includegraphics[width=0.3cm]{lion}
-> \end{document}
+
+```
+\begin{document}
+    \LaTex{}
+    设置缩放比例
+    \includegraphics[scale=0.3]{lion}
+    设置高度
+    \includegraphics[height=0.3cm]{lion}
+    设置宽度
+    \includegraphics[width=0.3cm]{lion}
+    设置版型高度
+    \includegraphics[height=0.3cm]{lion}
+    设置版型宽度
+    \includegraphics[width=0.3cm]{lion}
+\end{document}
+```
 
 ## 表格
 
-> \begin{document}
-> 生成五列表格，分别是左对齐，居中，居中，右对齐和指定宽度(自动换行)
-> \begin{tabular}{l || c | c | r | p{1.5cm}}
-> 姓名 & 语文 & 数学 & 外语 & 备注 \\
-> \hilne \hilne 两个命令可以产生双横线
-> 姓名 & 语文 & 数学 & 外语 & 备注 \\
-> \hilne
-> 姓名 & 语文 & 数学 & 外语 & 备注 \\
-> \hilne
-> 姓名 & 语文 & 数学 & 外语 & 备注 \\
-> \hilne
-> \end{tabular}
-> \end{document}
+```
+\begin{document}
+    生成五列表格，分别是左对齐，居中，居中，右对齐和指定宽度(自动换行)
+    \begin{tabular}{l || c | c | r | p{1.5cm}}
+        姓名 & 语文 & 数学 & 外语 & 备注 \\
+        \hilne \hilne 两个命令可以产生双横线
+        姓名 & 语文 & 数学 & 外语 & 备注 \\
+        \hilne
+        姓名 & 语文 & 数学 & 外语 & 备注 \\
+        \hilne
+        姓名 & 语文 & 数学 & 外语 & 备注 \\
+        \hilne
+    \end{tabular}
+\end{document}
+```
 
 ## 浮动体
 
-> \begin{document}
-> 交叉引用
-> \LaTeX{}中\Tex系统吉祥物见图\ref{fig-lion}
-> \begin{figure}
-> 图片居中
-> \centering
-> \includegraphics[scale=0.3]{lion}
-> 设置图片标题并且设置标签
-> \caption{\Tex 吉祥物}\label{fig-lion}
-> \end{figure}
-> \begin{table}
-> 表格居中
-> \centering
-> 设置图片标题
-> \caption{考试成绩单}
-> \begin{tabular}{l || c | c | r | p{1.5cm}}
-> 姓名 & 语文 & 数学 & 外语 & 备注 \\
-> \end{tabular}
-> \end{table}
-> \end{document}
+```
+\begin{document}
+    交叉引用
+    \LaTeX{}中\Tex系统吉祥物见图\ref{fig-lion}
+    
+    \begin{figure}
+        图片居中
+        \centering
+        \includegraphics[scale=0.3]{lion}
+        设置图片标题并且设置标签
+        \caption{\Tex 吉祥物}\label{fig-lion}
+    \end{figure}
+    
+    \begin{table}
+        表格居中
+        \centering
+        设置图片标题
+        \caption{考试成绩单}
+        
+        \begin{tabular}{l || c | c | r | p{1.5cm}}
+            姓名 & 语文 & 数学 & 外语 & 备注 \\
+        \end{tabular}
+        
+    \end{table}
+    
+\end{document}
+```
+
 
  - `\begin{figure}[<允许位置>]`
  - <允许位置>参数（默认tbp）
@@ -191,27 +204,37 @@ Study notes of LaTex
 - `比例是 \[frac{3}{4}\]`
 - `比例是 \begin{displaymath} frac{3}{4} \end{displaymath}`
 - 对公式进行自动编号并且对公式进行交叉引用：
-> `交换律见式\ref{eq:commutative}`
-> `\begin{equation}`
-> `a+b=b+a \label{eq:commutative}`
-> `\end{equation}`
+
+```
+交换律见式\ref{eq:commutative}
+\begin{equation}
+    a+b=b+a \label{eq:commutative}
+\end{equation}
+```
+
 - 对公式不进行自动编号并且对公式进行交叉引用（需要amsmath宏包）：
-> `交换律见式\ref{eq:commutative}`
-> `\begin{equation*}`
-> `a+b=b+a \label{eq:commutative}`
-> `\end{equation*}`
+
+```
+交换律见式\ref{eq:commutative}
+\begin{equation*}
+    a+b=b+a \label{eq:commutative}
+\end{equation*}
+```
 
 ### 矩阵（需要amsmath宏包）
 
 
-`\begin{document}`
-`\[`
-`\begin{matrix}`
-`0 & 1 \\`
-`1 & 0 `
-`\end{matrix}`
-`\]`
-`\end{document}`
+```
+\begin{document}
+    \[
+    \begin{matrix}
+        0 & 1 \\
+        1 & 0 
+    \end{matrix}
+    \]
+\end{document}
+```
+
 
 * 加入小括号
 `\begin{pmatrix}`
@@ -248,60 +271,164 @@ Study notes of LaTex
 
 ### 多行公式（需要amsmath和amssymb宏包）
 
-> \begin{document}
-> % 用gather（带编号）和gather*（不带编号）环境（可以使用\\换行）
-> \begin{gather}
-> a+b=b+a \\
-> ab ba
-> \end{gather}
-> % 在\\之前使用\notag阻止编号
-> \begin{gather}
-> a+b=b+a \notag \\
-> ab ba
-> \end{gather}
-> % 用align环境按照指定位置对齐（align*不对公式进行编号），对齐位置由&决定
-> \begin{align}
-> a+b&=b+a \\
-> ab& ba
-> \end{align}
-> % 用split环境将公式进行多行排版
-> \begin{split}
-> a+b& \\
-> =b+a
-> \end{split}
-> \end{document}
+```
+\begin{document}
+    % 用gather（带编号）和gather*（不带编号）环境（可以使用\\换行）
+    \begin{gather}
+        a+b=b+a \\
+        ab ba
+    \end{gather}
+    
+    % 在\\之前使用\notag阻止编号
+    \begin{gather}
+        a+b=b+a \notag \\
+        ab ba
+    \end{gather}
+    
+    % 用align环境按照指定位置对齐（align*不对公式进行编号），对齐位置由&决定
+    \begin{align}
+        a+b&=b+a \\
+        ab& ba
+    \end{align}
+    
+    % 用split环境将公式进行多行排版
+    \begin{split}
+        a+b& \\
+        =b+a
+    \end{split}
+\end{document}
+```
 
 ## 参考文献——BibTex
 
 ### 一次管理，一次使用
 
+```
+\begin{thebibliography}
+    \bibitem[记号]{引用标志}文献条目1
+    %使用`\emph`标重
+    \bibitem{article1}陈立辉,苏伟.\emph{基于LaTeX的Web数学公式提取方法研究}[J]. 计算机科学。 2014(06)
+    %使用`\texttt`引用链接
+    \bibitem{latexGuide}Kopka,Patrick.\emph{Guide to \LaTeX}, $4^{th}$ Edition. Available at \texttt{http://www.amazon.com}
+\end{thebibliography}
+```
 
-> \begin{thebibliography}
-> \bibitem[记号]{引用标志}文献条目1
-> %使用`\emph`标重
-> \bibitem{article1}陈立辉,苏伟.\emph{基于LaTeX的Web数学公式提取方法研究}[J]. 计算机科学。 2014(06)
-> %使用`\texttt`引用链接
-> \bibitem{latexGuide}Kopka,Patrick.\emph{Guide to \LaTeX}, $4^{th}$ Edition. Available at \texttt{http://www.amazon.com}
-> \end{thebibliography}
-
-* 使用`\cite{article1}`引用文章
+* **使用`\cite{article1}`引用文章**
 
 ### 一次管理，多次使用
 
-> @BOOK{引用标志,
-> title = {},
-> publisher = {},
-> year = {},
-> author = {},
-> series = {},
-> address = {},
-> adition = {}
-> }
+```
+@BOOK{引用标志,
+    title = {},
+    publisher = {},
+    year = {},
+    author = {},
+    series = {},
+    address = {},
+    adition = {}
+}
+```
 
 
-* 使用`\bibliographystyle{plain}`指定样式
-* 正文中使用：
-> \begin{document}
-> \bibliography{引用标志}
-> \end{document}
+* **使用`\bibliographystyle{plain}`指定样式**
 
+* **正文中使用：**
+```
+\begin{document}
+    \bibliography{引用标志}
+\end{document}
+```
+* **排版未引用的文献：`\nocite{*}`**
+
+
+## 参考文献——BibLaTex
+
+```
+\usepackage[style=numeric,backend=biber]{biblatex}
+\addbibresource{test.bib}
+
+%正文区
+\begin{document}
+    %一次管理，多次引用
+    无格式化引用\cite{biblatex}
+    带方括号的引用\parencite{a1-1}
+    上标引用\supercite{6-1}
+    %列出未引用文献
+    \nocite{*}
+    \printbibliography[title = {参考文献}]
+\end{document}
+```
+
+## 命令的定义与重定义
+
+* **内容与格式分离的思想**
+
+```
+%导言区
+\documentclass{ctexart}（或者ctexbook, ctexrep）
+%\newcommand-定义命令
+%命令只能由字母组成，不能以\end开头
+%\newcommand<命令>[<参数个数>][<手参数默认值>]{<具体定义>}
+```
+
+* **例如：使用\PRC 相当于 People's Pepublic of \emph{China}**
+
+```
+\newcommand\PRC{People's Republic of \emph{China}}
+
+%正文区（文稿区）
+\begin{docuemnt}
+    \PRC
+\end{document}
+```
+
+* **\newcommand还可以添加参数，参数个数从1-9，使用时前添加#**
+
+```
+\newcommand\loves[2]{#1 喜欢 #2}
+
+%正文区（文稿区）
+\begin{docuemnt}
+    \loves{猫儿}{鱼儿}
+\end{document}
+```
+
+* **为\newcommand添加默认参数值**
+
+```
+\newcommand\loves[3][喜欢]{#2#1#3}
+
+%正文区（文稿区）
+\begin{docuemnt}
+    %输出猫儿喜欢鱼儿
+    \loves{猫儿}{鱼儿} 
+    
+    %输出猫儿最爱鱼儿
+    \loves[最爱]{猫儿}{鱼儿}
+\end{document}
+```
+
+* **使用\renewcommand\abstractname重定义命令**
+
+* **使用\newenvironment定义环境**
+
+```
+%\newenvironment{<环境名称>}[<参数个数>][<首参数默认值>]
+%    {<环境前定义>}
+%    {<环境后定义>}
+    
+\newenvironment{myabstract}[1][摘要]
+{\small
+    \begin{center}\bfseries #1\end{center}
+    \begin{quotation}}
+    {\end{quotation}}
+```
+
+
+* **使用\renewenvironment重定义环境**
+
+* **\newenvironment和\newcommand嵌套使用**
+
+```
+
+```

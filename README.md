@@ -430,5 +430,17 @@ Study notes of LaTex
 * **\newenvironment和\newcommand嵌套使用**
 
 ```
-
+\newenvironment{Quotation}[1]
+{\newcommand\quotesource{#1}
+    \begin{quotation}}
+    {\par\hfill--- 《\textit{\quotesource}》
+    \end{quotation}}   
+    
+\begin{document}
+    \begin{Quotation}{乾卦}
+        初九，潜龙勿用。
+    \end{Quotation}
+\end{document}
 ```
+
+* **文章结构内容参考：** https://www.bilibili.com/video/av16002978/

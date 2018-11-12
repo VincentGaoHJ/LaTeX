@@ -76,58 +76,58 @@ Study notes of LaTex
  - 格式：EPS，PDF，PNG，JPEG，BMP
  - 图片在当前目录下的figures和PICS目录下：`\graphicspath{{figures/},{pics
  - 在正文中插入图片：
-\begin{document}
-\LaTex{}
-设置缩放比例
-\includegraphics[scale=0.3]{lion}
-设置高度
-\includegraphics[height=0.3cm]{lion}
-设置宽度
-\includegraphics[width=0.3cm]{lion}
-设置版型高度
-\includegraphics[height=0.3cm]{lion}
-设置版型宽度
-\includegraphics[width=0.3cm]{lion}
-\end{document}
+> \begin{document}
+> \LaTex{}
+> 设置缩放比例
+> \includegraphics[scale=0.3]{lion}
+> 设置高度
+> \includegraphics[height=0.3cm]{lion}
+> 设置宽度
+> \includegraphics[width=0.3cm]{lion}
+> 设置版型高度
+> \includegraphics[height=0.3cm]{lion}
+> 设置版型宽度
+> \includegraphics[width=0.3cm]{lion}
+> \end{document}
 
 ## 表格
 
-\begin{document}
-生成五列表格，分别是左对齐，居中，居中，右对齐和指定宽度(自动换行)
-\begin{tabular}{l || c | c | r | p{1.5cm}}
-姓名 & 语文 & 数学 & 外语 & 备注 \\
-\hilne \hilne 两个命令可以产生双横线
-姓名 & 语文 & 数学 & 外语 & 备注 \\
-\hilne
-姓名 & 语文 & 数学 & 外语 & 备注 \\
-\hilne
-姓名 & 语文 & 数学 & 外语 & 备注 \\
-\hilne
-\end{tabular}
-\end{document}
+> \begin{document}
+> 生成五列表格，分别是左对齐，居中，居中，右对齐和指定宽度(自动换行)
+> \begin{tabular}{l || c | c | r | p{1.5cm}}
+> 姓名 & 语文 & 数学 & 外语 & 备注 \\
+> \hilne \hilne 两个命令可以产生双横线
+> 姓名 & 语文 & 数学 & 外语 & 备注 \\
+> \hilne
+> 姓名 & 语文 & 数学 & 外语 & 备注 \\
+> \hilne
+> 姓名 & 语文 & 数学 & 外语 & 备注 \\
+> \hilne
+> \end{tabular}
+> \end{document}
 
 ## 浮动体
 
-\begin{document}
-交叉引用
-\LaTeX{}中\Tex系统吉祥物见图\ref{fig-lion}
-\begin{figure}
-图片居中
-\centering
-\includegraphics[scale=0.3]{lion}
-设置图片标题并且设置标签
-\caption{\Tex 吉祥物}\label{fig-lion}
-\end{figure}
-\begin{table}
-表格居中
-\centering
-设置图片标题
-\caption{考试成绩单}
-\begin{tabular}{l || c | c | r | p{1.5cm}}
-姓名 & 语文 & 数学 & 外语 & 备注 \\
-\end{tabular}
-\end{table}
-\end{document}
+> \begin{document}
+> 交叉引用
+> \LaTeX{}中\Tex系统吉祥物见图\ref{fig-lion}
+> \begin{figure}
+> 图片居中
+> \centering
+> \includegraphics[scale=0.3]{lion}
+> 设置图片标题并且设置标签
+> \caption{\Tex 吉祥物}\label{fig-lion}
+> \end{figure}
+> \begin{table}
+> 表格居中
+> \centering
+> 设置图片标题
+> \caption{考试成绩单}
+> \begin{tabular}{l || c | c | r | p{1.5cm}}
+> 姓名 & 语文 & 数学 & 外语 & 备注 \\
+> \end{tabular}
+> \end{table}
+> \end{document}
 
  - `\begin{figure}[<允许位置>]`
  - <允许位置>参数（默认tbp）
@@ -245,3 +245,63 @@ Study notes of LaTex
 * 矩阵行内小矩阵（smallmatrix）
 
 * array环境排版更为复杂的环境
+
+### 多行公式（需要amsmath和amssymb宏包）
+
+> \begin{document}
+> % 用gather（带编号）和gather*（不带编号）环境（可以使用\\换行）
+> \begin{gather}
+> a+b=b+a \\
+> ab ba
+> \end{gather}
+> % 在\\之前使用\notag阻止编号
+> \begin{gather}
+> a+b=b+a \notag \\
+> ab ba
+> \end{gather}
+> % 用align环境按照指定位置对齐（align*不对公式进行编号），对齐位置由&决定
+> \begin{align}
+> a+b&=b+a \\
+> ab& ba
+> \end{align}
+> % 用split环境将公式进行多行排版
+> \begin{split}
+> a+b& \\
+> =b+a
+> \end{split}
+> \end{document}
+
+## 参考文献——BibTex
+
+### 一次管理，一次使用
+
+
+> \begin{thebibliography}
+> \bibitem[记号]{引用标志}文献条目1
+> %使用`\emph`标重
+> \bibitem{article1}陈立辉,苏伟.\emph{基于LaTeX的Web数学公式提取方法研究}[J]. 计算机科学。 2014(06)
+> %使用`\texttt`引用链接
+> \bibitem{latexGuide}Kopka,Patrick.\emph{Guide to \LaTeX}, $4^{th}$ Edition. Available at \texttt{http://www.amazon.com}
+> \end{thebibliography}
+
+* 使用`\cite{article1}`引用文章
+
+### 一次管理，多次使用
+
+> @BOOK{引用标志,
+> title = {},
+> publisher = {},
+> year = {},
+> author = {},
+> series = {},
+> address = {},
+> adition = {}
+> }
+
+
+* 使用`\bibliographystyle{plain}`指定样式
+* 正文中使用：
+> \begin{document}
+> \bibliography{引用标志}
+> \end{document}
+

@@ -8,9 +8,9 @@ Consider the future generation of smart home climate control systems that will a
 
 1. To begin, assume that you live in a small home or apartment with only one thermostat (one heating/cooling zone)
 
- * * Model a potential next generation smart home climate control system. Develop an algorithm or algorithms for this system to perform the functions described above. Discuss how your system works.
+     * Model a potential next generation smart home climate control system. Develop an algorithm or algorithms for this system to perform the functions described above. Discuss how your system works.
 
- * * Discuss the potential benefits and possible issues with your system, and compare your system with at least two other smart home climate control systems currently in use.
+     * Discuss the potential benefits and possible issues with your system, and compare your system with at least two other smart home climate control systems currently in use.
 
 2. Describe and discuss how you would make changes to your system for a larger home with additional thermostats to control several heating/cooling zones in the home. 
 

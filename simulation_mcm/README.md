@@ -8,29 +8,29 @@ Consider the future generation of smart home climate control systems that will a
 
 1. To begin, assume that you live in a small home or apartment with only one thermostat (one heating/cooling zone)
 
-a. Model a potential next generation smart home climate control system. Develop an algorithm or algorithms for this system to perform the functions described above. Discuss how your system works.
+ * * Model a potential next generation smart home climate control system. Develop an algorithm or algorithms for this system to perform the functions described above. Discuss how your system works.
 
-b. Discuss the potential benefits and possible issues with your system, and compare your system with at least two other smart home climate control systems currently in use.
+ * * Discuss the potential benefits and possible issues with your system, and compare your system with at least two other smart home climate control systems currently in use.
 
 2. Describe and discuss how you would make changes to your system for a larger home with additional thermostats to control several heating/cooling zones in the home. 
 
 3. Write a one-page non-technical News Release describing your new system. 
 
-Your submission should consist of:
+### Your submission should consist of:
 
-• One-page Summary Sheet,
-• One-page News Release,
-• Your solution of no more than 30 pages, for a maximum of 32 pages with your summary and news release.
-• Note: Reference list and any appendices do not count toward the 32-page limit and should appear after your completed solution.
+ * One-page Summary Sheet,
+ * One-page News Release,
+ * Your solution of no more than 30 pages, for a maximum of 32 pages with your summary and news release.
+ * Note: Reference list and any appendices do not count toward the 32-page limit and should appear after your completed solution.
 
-Glossary:
+### Glossary:
 
-allergens - substances that cause allergic reactions
+* allergens - substances that cause allergic reactions
 
-app - an application; a small specialized program used on mobile electronic devices
+* app - an application; a small specialized program used on mobile electronic devices
 
-news release - a statement prepared for release to the public or press
+* news release - a statement prepared for release to the public or press
 
-online - available by means of a computer over a network
+* online - available by means of a computer over a network
 
-smart home system - an automation system used within a residence to control any combination of electronically connected items such as lighting, heating, air conditioning, security, appliances, and audio-visual equipment remotely
+* smart home system - an automation system used within a residence to control any combination of electronically connected items such as lighting, heating, air conditioning, security, appliances, and audio-visual equipment remotely

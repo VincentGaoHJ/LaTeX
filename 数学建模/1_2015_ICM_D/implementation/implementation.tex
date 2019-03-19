@@ -1,0 +1,85 @@
+% \documentclass[UTF8]{ctexart}
+\documentclass[10pt]{article}
+\title{Our First Document}
+\author{GaoHaojun HuYukang LiuZhiqi}
+\date{\today}
+
+
+\begin{document}
+  \maketitle
+  \tableofcontents
+
+  \section{Introduction}
+
+  Network science has gained its popularity in management science. Modeling issues on   human resource organization is, at root, modeling on its networks. In this problem, we need to consider a specific phenomena, churn, in ICM company. To fulfill this, we decompose the problem into several steps:
+
+  Build up a human capital network structure using information provided. Use it as framework for further analysis.
+
+  Design a model capturing the mechanism of churn effect and design reasonable reactions of the HR manager. Estimate organizational productivity and costs.
+
+  Analyze the sustainability of the network under different churn rates, and estimate its effects.
+
+  Set up measures for company health and test effects of various changes. Point out heuristics for the HR manager accordingly.
+
+  Incorporate ideas from team science into the model and point out the possibilities of analyzing from multilayer view.
+
+  Implement sensitivity test and analyze model strengths and weaknesses.
+
+  \section{Fundamental Assumption}
+
+  No staff naturally retire or get fired. Each staff member makes a decision whether to leave or not.
+
+  The staff members have latent characteristics unknown to the HR manager(and us)
+
+  which might influence the decision process.
+
+  Beyond the visible organizational structure, there exists a Human Capital network.
+
+  A staff member’s monthly decision ("to leave" or "to stay") acts as a piece of information and flows through the Human Capital network.
+
+  Individuals digest received information through a learning process. This learning mechanism will affect their decisions.
+
+  The HR manager can affect the number of people in the positions via different combined uses of promotion and recruitment. A combined use of promotion and recruitment, in this paper, is called a "strategy".
+
+  \section{Preliminaries}
+  \subsection{Constructing Human Capital Network}
+
+  First, we merge the table and graph given in the problem by assigning levels of positions to entries based on several reasonable assumptions:
+
+  Every senior/junior manager has a clerk in his office for administrative tasks.
+
+  The level of position of a staff member tend to be higher if his office is closer to the CEO in the organizational graph.
+
+  The level of position of a manager cannot be lower than someone whose office belongs to a lower tier in the organization graph.
+
+  Thus we can get the following allocation table for the 370 positions:
+
+
+  \subsection{Terms and Mathematical Notations}
+  \section{Models}
+
+  We construct our analysis by modeling the dynamic processes of staff churn, promotion and recruitment. Our probabilistic model for staff churn inspired by Bayesian learning principles, which estimates and updates the likelihood of individual churn using the Beta-Bernoulli distribution. Next, we develop three promotion measures. Moreover, we propose several means of controlling the recruitment rate.
+
+  \subsection{Modeling Staff Churn}
+  \subsubsection{Preliminaries}
+
+
+  \subsection{Modeling HR Manager’s Reactions}
+  \subsection{Model Functions}
+  \section{Simulations}
+  \subsection{Task 1: Simulations under Current Situation}
+  \subsection{Task 2: Defining Productivity and Testing Churn Influences}
+  \subsection{Task 3: Budget Calculation}
+  \subsection{Task 4: Changing Churn Rate}
+  \subsection{Task 5: Pure Promotion and HR Health}
+  \subsection{Comparing among Strategies}
+  \section{Extension - Team Science and Multilayers}
+  \subsection{Incorporating Team Science}
+  \subsection{Incorporating Multilayer Networks}
+  \section{Sensitivity Analysis}
+  \section{Strengths and Weaknesses}
+  \subsection{Strengths}
+  \subsection{Weaknesses}
+  \section{Conclusion}
+
+\end{document}
